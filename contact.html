@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact Us – GLOBALLINK WHOLESALE</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+  .contact-section { padding: 80px 0; background: #fff; }
+
+  /* 3-column card */
+  .contact-card {
+    display: grid;
+    grid-template-columns: 210px 1fr 1fr;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+
+  /* LEFT */
+  .cc-left {
+    padding: 44px 28px;
+    background: #fff;
+    border-right: 1px solid #e2e8f0;
+  }
+  .cc-left h2 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #1a2b3c;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .cc-left .sub {
+    font-size: 13.5px;
+    color: #718096;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+  .cc-left hr { border: none; border-top: 1px solid #e2e8f0; margin-bottom: 22px; }
+  .cc-email-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #a0aec0;
+    margin-bottom: 5px;
+  }
+  .cc-email-val { font-size: 13.5px; font-weight: 500; color: #0a7c8c; }
+
+  /* CENTER */
+  .cc-center { overflow: hidden; min-height: 520px; }
+  .cc-center img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  /* RIGHT */
+  .cc-right {
+    padding: 44px 38px;
+    background: #fff;
+    border-left: 1px solid #e2e8f0;
+  }
+  .cc-right h3 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #1a2b3c;
+    margin-bottom: 2px;
+  }
+  .cc-right .form-hr { border: none; border-top: 1px solid #e2e8f0; margin: 14px 0 24px; }
+  .fg { margin-bottom: 16px; }
+  .fg label { display: block; font-size: 13px; font-weight: 500; color: #2d3748; margin-bottom: 5px; }
+  .fi, .ft {
+    width: 100%;
+    padding: 9px 13px;
+    border: 1px solid #dde1e7;
+    border-radius: 4px;
+    font-size: 13.5px;
+    font-family: 'Poppins', sans-serif;
+    color: #2d3748;
+    background: #fff;
+    outline: none;
+    transition: border-color .2s;
+  }
+  .fi:focus, .ft:focus { border-color: #0a7c8c; }
+  .ft { height: 105px; resize: vertical; }
+  .fi::placeholder, .ft::placeholder { color: #b0bec5; }
+  .btn-send {
+    background: #0a2d3d;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background .2s;
+  }
+  .btn-send:hover { background: #0a7c8c; }
+  .form-note { font-size: 12px; color: #718096; margin-top: 13px; line-height: 1.65; max-width: 280px; }
+
+  /* Social follow */
+  .social-follow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 50px;
+    padding-top: 0;
+    border-top: 1px solid #e2e8f0;
+    padding: 38px 0 0 0;
+  }
+  .sf-line { flex: 1; height: 1px; background: #e2e8f0; }
+  .sf-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a2b3c;
+    padding: 0 24px;
+    white-space: nowrap;
+  }
+  .sf-icons { display: flex; gap: 22px; align-items: center; padding-left: 30px; }
+  .sf-icons a { font-size: 19px; color: #718096; transition: color .2s; }
+  .sf-icons a:hover { color: #0a7c8c; }
+
+  @media (max-width: 900px) {
+    .contact-card { grid-template-columns: 1fr; }
+    .cc-center { min-height: 280px; }
+    .cc-left, .cc-right { border: none; border-bottom: 1px solid #e2e8f0; }
+    .social-follow { flex-direction: column; gap: 18px; text-align: center; }
+    .sf-icons { padding-left: 0; }
+  }
+  @media (max-width: 540px) {
+    .cc-left, .cc-right { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+    <a href="mailto:Info.glinkltd@on.co.uk" style="font-size:13px;">
+      <i class="fas fa-envelope" style="margin-right:6px;"></i>Info.glinkltd@on.co.uk
+    </a>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo-wrap">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:52px;height:52px;background:linear-gradient(135deg,#0a5c6b,#0d9aad);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+          <i class="fas fa-handshake" style="color:#fff;font-size:22px;"></i>
+        </div>
+        <div>
+          <div style="font-weight:800;font-size:16px;color:#0a2d3d;line-height:1.1;letter-spacing:0.3px;">GLOBALLINK WHOLESALE</div>
+          <div style="font-size:10px;letter-spacing:2.5px;color:#0a7c8c;font-weight:600;text-transform:uppercase;">LIMITED</div>
+        </div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <div class="dropdown">
+        <a href="#">Our Policies <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="delivery-return.html">Delivery &amp; Return</a>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <a href="contact.html" class="btn-nav">CONTACT US</a>
+    </div>
+    <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About Us</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="delivery-return.html">Delivery &amp; Return</a>
+    <a href="terms-conditions.html">Terms &amp; Conditions</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=1400&q=80');"></div>
+  <div class="page-hero-content">
+    <h1>Contact Us</h1>
+    <p>Start the conversation to established good relationship and business.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="container">
+
+    <!-- 3-col card -->
+    <div class="contact-card">
+
+      <!-- LEFT -->
+      <div class="cc-left">
+        <h2>Let's get in touch.</h2>
+        <p class="sub">Don't hesitate to contact us for more information.</p>
+        <hr/>
+        <div class="cc-email-lbl">EMAIL SUPPORT</div>
+        <div class="cc-email-val">Info.glinkltd@on.co.uk</div>
+      </div>
+
+      <!-- CENTER IMAGE -->
+      <div class="cc-center">
+        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=700&q=80" alt="Warehouse worker"/>
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="cc-right">
+        <h3>Send us message.</h3>
+        <hr class="form-hr"/>
+        <div class="fg">
+          <label>Name</label>
+          <input type="text" class="fi" placeholder="Name"/>
+        </div>
+        <div class="fg">
+          <label>Phone</label>
+          <input type="tel" class="fi" placeholder="Phone"/>
+        </div>
+        <div class="fg">
+          <label>Email</label>
+          <input type="email" class="fi" placeholder="Email"/>
+        </div>
+        <div class="fg">
+          <label>Message</label>
+          <textarea class="ft" placeholder="Message"></textarea>
+        </div>
+        <button class="btn-send">SEND MESSAGE</button>
+        <p class="form-note">We are committed to protecting your privacy. We will never collect information about you.</p>
+      </div>
+
+    </div>
+
+    <!-- Social Follow -->
+    <div class="social-follow">
+      <div class="sf-line"></div>
+      <div class="sf-title">Follow our social media</div>
+      <div class="sf-line"></div>
+      <div class="sf-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:56px;height:56px;background:rgba(13,154,173,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-handshake" style="color:#0d9aad;font-size:24px;"></i>
+          </div>
+          <div>
+            <div style="font-weight:800;font-size:16px;color:#fff;line-height:1.1;">GLOBALLINK WHOLESALE</div>
+            <div style="font-size:10px;letter-spacing:2px;color:#0d9aad;font-weight:600;text-transform:uppercase;">WHOLESALE</div>
+          </div>
+        </div>
+        <div class="footer-info">
+          <p><i class="fas fa-building"></i> Company Number: 17104734</p>
+          <p><i class="fas fa-map-marker-alt"></i> Bedford, UK</p>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:Info.glinkltd@on.co.uk">Info.glinkltd@on.co.uk</a></p>
+        </div>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Policies</h5>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="delivery-return.html">Delivery &amp; Returns</a></li>
+          <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h5>Stay Connected With GLOBALLINK WHOLESALE</h5>
+        <p>Be the first to know about new product arrivals, exclusive wholesale deals, and industry updates.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Email"/>
+          <button>SIGN UP</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 GLOBALLINK WHOLESALE LIMITED, All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
