@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') { http_response_code(405); exit; }
 $smtp_host  = 'smtp.gmail.com';
 $smtp_port  = 587;
 $smtp_user  = 'mustafaprogrammer786@gmail.com';
-$smtp_pass  = 'YOUR_APP_PASSWORD_HERE';   // same App Password
+$smtp_pass  = 'jfcuemlfkdqtcyqx';   // same App Password
 $mail_to    = 'Info@glinkltd.co.uk';
 $mail_subj  = 'New Newsletter Subscriber – GLOBALLINK WHOLESALE';
 // ─────────────────────────────────────────────────────────
