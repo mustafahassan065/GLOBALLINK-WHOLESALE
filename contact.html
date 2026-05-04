@@ -6,7 +6,7 @@
 <title>Contact Us – GLOBALLINK WHOLESALE</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="css/style.css"/>
 <style>
   .contact-section { padding: 80px 0; background: #fff; }
 
@@ -140,8 +140,8 @@
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
-    <a href="mailto:Info@glinkltd.co.uk" style="font-size:13px;">
-      <i class="fas fa-envelope" style="margin-right:6px;"></i>Info@glinkltd.co.uk
+    <a href="mailto:Info.glinkltd@on.co.uk" style="font-size:13px;">
+      <i class="fas fa-envelope" style="margin-right:6px;"></i>Info.glinkltd@on.co.uk
     </a>
     <div class="social-links">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -215,7 +215,7 @@
         <p class="sub">Don't hesitate to contact us for more information.</p>
         <hr/>
         <div class="cc-email-lbl">EMAIL SUPPORT</div>
-        <div class="cc-email-val">Info@glinkltd.co.uk</div>
+        <div class="cc-email-val">Info.glinkltd@on.co.uk</div>
       </div>
 
       <!-- CENTER IMAGE -->
@@ -243,7 +243,8 @@
           <label>Message</label>
           <textarea class="ft" placeholder="Message"></textarea>
         </div>
-        <button class="btn-send">SEND MESSAGE</button>
+        <button class="btn-send" id="submitBtn">SEND MESSAGE</button>
+        <div id="form-msg" style="display:none;margin-top:14px;padding:12px 16px;border-radius:4px;font-size:13px;font-weight:500;"></div>
         <p class="form-note">We are committed to protecting your privacy. We will never collect information about you.</p>
       </div>
 
@@ -282,7 +283,7 @@
         <div class="footer-info">
           <p><i class="fas fa-building"></i> Company Number: 17104734</p>
           <p><i class="fas fa-map-marker-alt"></i> Bedford, UK</p>
-          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:Info@glinkltd.co.uk">Info@glinkltd.co.uk</a></p>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:Info.glinkltd@on.co.uk">Info.glinkltd@on.co.uk</a></p>
         </div>
       </div>
       <div>
@@ -317,6 +318,75 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.getElementById('submitBtn').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  var btn  = this;
+  var name    = document.querySelector('.fi[type="text"]').value.trim();
+  var phone   = document.querySelector('.fi[type="tel"]').value.trim();
+  var email   = document.querySelector('.fi[type="email"]').value.trim();
+  var message = document.querySelector('.ft').value.trim();
+  var msgBox  = document.getElementById('form-msg');
+
+  // Basic client-side validation
+  if (!name || !email || !message) {
+    msgBox.style.display = 'block';
+    msgBox.style.background = '#fff5f5';
+    msgBox.style.color = '#c53030';
+    msgBox.style.border = '1px solid #feb2b2';
+    msgBox.textContent = 'Please fill in Name, Email and Message fields.';
+    return;
+  }
+
+  // Loading state
+  btn.disabled = true;
+  btn.textContent = 'SENDING...';
+  btn.style.opacity = '0.7';
+  msgBox.style.display = 'none';
+
+  // Build form data
+  var data = new FormData();
+  data.append('name',    name);
+  data.append('phone',   phone);
+  data.append('email',   email);
+  data.append('message', message);
+
+  fetch('send-mail.php', { method: 'POST', body: data })
+    .then(function(r){ return r.json(); })
+    .then(function(res) {
+      msgBox.style.display = 'block';
+      if (res.success) {
+        msgBox.style.background = '#f0fff4';
+        msgBox.style.color = '#276749';
+        msgBox.style.border = '1px solid #9ae6b4';
+        msgBox.textContent = res.message;
+        // Clear form
+        document.querySelector('.fi[type="text"]').value  = '';
+        document.querySelector('.fi[type="tel"]').value   = '';
+        document.querySelector('.fi[type="email"]').value = '';
+        document.querySelector('.ft').value = '';
+      } else {
+        msgBox.style.background = '#fff5f5';
+        msgBox.style.color = '#c53030';
+        msgBox.style.border = '1px solid #feb2b2';
+        msgBox.textContent = res.message;
+      }
+    })
+    .catch(function() {
+      msgBox.style.display = 'block';
+      msgBox.style.background = '#fff5f5';
+      msgBox.style.color = '#c53030';
+      msgBox.style.border = '1px solid #feb2b2';
+      msgBox.textContent = 'Connection error. Please email us directly at Info.glinkltd@on.co.uk';
+    })
+    .finally(function() {
+      btn.disabled = false;
+      btn.textContent = 'SEND MESSAGE';
+      btn.style.opacity = '1';
+    });
+});
+</script>
 </body>
 </html>
