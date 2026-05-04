@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $smtp_host     = 'smtp.gmail.com';
 $smtp_port     = 587;
 $smtp_user     = 'mustafaprogrammer786@gmail.com';  // Your Gmail
-$smtp_pass     = 'YOUR_APP_PASSWORD_HERE';           // 16-char Gmail App Password (no spaces)
+$smtp_pass     = 'jfcuemlfkdqtcyqx';           // 16-char Gmail App Password (no spaces)
 $mail_from     = 'mustafaprogrammer786@gmail.com';
 $mail_from_name= 'GLOBALLINK WHOLESALE';
 $mail_to       = 'Info.glinkltd@on.co.uk';           // Client's inbox
