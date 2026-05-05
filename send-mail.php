@@ -17,7 +17,7 @@ $smtp_user     = 'mustafaprogrammer786@gmail.com';  // Your Gmail
 $smtp_pass     = 'jfcuemlfkdqtcyqx';           // 16-char Gmail App Password (no spaces)
 $mail_from     = 'mustafaprogrammer786@gmail.com';
 $mail_from_name= 'GLOBALLINK WHOLESALE';
-$mail_to       = 'Info.glinkltd@on.co.uk';           // Client's inbox
+$mail_to       = 'Info@glinkltd.co.uk';           // Client's inbox
 $mail_to_name  = 'GLOBALLINK WHOLESALE LIMITED';
 $mail_subject  = 'New Contact Form Message – GLOBALLINK WHOLESALE';
 // ─────────────────────────────────────────────────────────────
@@ -158,6 +158,6 @@ try {
     error_log('GLOBALLINK Mailer Error: ' . $e->getMessage());
     echo json_encode([
         'success' => false,
-        'message' => 'Sorry, something went wrong. Please email us directly at Info.glinkltd@on.co.uk'
+        'message' => 'Sorry, something went wrong. Please email us directly at Info@glinkltd.co.uk'
     ]);
 }
